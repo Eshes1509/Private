@@ -23,16 +23,35 @@ int main(void){
 
     for (i = 0; i < fullName[i]; i++)
     {
-        printf("%s starter\n\n", fullName[i]);
+        printf("%s tur.\n\n", fullName[i]);
 
-        for (size_t i = 0; i < count; i++)
-        {
             printf("Indtast point for 1. kast: ");
-            scanf()
-        };
+            scanf("%d", score_for_første_kast_til_den_pågældende_spiller);
+
+            point_til_den_pågældende_spiller = point_til_den_pågældende_spiller - score_for_første_kast_til_den_pågældende_spiller
+
+            printf("\nIndtast point for 2. kast: ");
+            scanf("%d", score_for_andet_kast_til_den_pågældende_spiller);
+
+            point_til_den_pågældende_spiller = point_til_den_pågældende_spiller - score_for_første_kast_til_den_pågældende_spiller
+
+            printf("\nIndtast point for 3. kast: ");
+            scanf("%d", score_for_tredje_kast_til_den_pågældende_spiller);
+
+            point_til_den_pågældende_spiller = point_til_den_pågældende_spiller - score_for_første_kast_til_den_pågældende_spiller
+
+            printf("Scoren er indtil videre er:\n")
+
+            for (i = 0; i < fullName[i]; i++)
+            {
+                printf("%s har %d point.\n", fullName[i], /* point variable */)
+            }
+            
                
     };
     
+    /* Implementer at hvis man lander på 1 eller går i minus skal man tilbage til den score man startede på inden runden startede. */
+    /* Print final scoreboard */
 
 }
 
