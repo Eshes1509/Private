@@ -108,5 +108,6 @@ int main(void)
 
     /* Implementer at hvis man lander på 1 eller går i minus skal man tilbage til den score man startede på inden runden startede. */
     /* Print final scoreboard */
+    /* Scoreboard skal sorteres efter point */
 }
 
