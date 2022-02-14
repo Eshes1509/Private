@@ -9,6 +9,62 @@
     >, and general description of the
     <a href="https://da.wikipedia.org/wiki/Yatzy"> Yatzy game</a>
     <body>
+        <form action="/newgame" method="post">
+            <fieldset>
+                <legend>Configure Game:</legend>
+                <label for="name_id"> Name:</label>
+                <input
+                    type="text"
+                    id="name_id"
+                    name="name"
+                    placeholder="Navn"
+                    autofocus
+                    required
+                    minlength="1"
+                    maxlength="30"
+                />
+                <label for="diceCount_id"> Number of Dice:</label>
+                <input
+                    type="number"
+                    id="diceCount_id"
+                    name="diceCount"
+                    placeholder="5"
+                    min="5"
+                    max="20"
+                    required
+                />
+                <label for="difficultyLevel_id"> Difficulty Level:</label>
+                <input
+                    type="number"
+                    id="difficultyLevel_id"
+                    name="difficultyLevel"
+                    placeholder="1"
+                    min="1"
+                    max="2"
+                    required
+                />
+                <label for="top_down" name="play_direction">
+                    Play Top Down:</label
+                >
+                <input
+                    type="radio"
+                    id="top_down"
+                    name="play_direction"
+                    value="top_down"
+                />
+                <label for="bottom_up" name="play_direction">
+                    Play Bottom Up:</label
+                >
+                <input
+                    type="radio"
+                    id="bottom_up"
+                    name="play_direction"
+                    value="bottom_up"
+                />
+                <input type="submit" value="New Game" />
+            </fieldset>
+        </form>
+
         <table id="scoretable">
             <caption>
                 Yatzy Scores
