@@ -3,7 +3,7 @@
  * This version of Yatzy is intentionally programmed as a simple C-style implementation in JavaScript;
  * Hence, more elegant JS implementations can be programmed. For IWP, this imperative style version is perfectly OK!
  **************************************************************************************************************** */
-import fs from "/Private/Lektion_3/P1_HTML_Markup/fs"; //enable use of file system
+import fs from "fs"; //enable use of file system
 //Note that we use EC6 modules!
 //You may need to add this to the package.json file when using EC6 modules: "type": "module",
 
@@ -425,7 +425,6 @@ function printScoresHTML(scoreTable) {
             res += "<span>";
             for (let d = 0; d < scoreTable[round].diceRoll.length; d++) {
                 const imgName = `${scoreTable[round].diceRoll[d]}`;
-                res += `<img src="resources/${imgName}-dice.png" width="20" height="20" >`;
                 res += `<img src="resources/${imgName}-dice.png" width="20" height="20" alt="dice ${imgName}" title="dice ${imgName}">`;
             }
             res += "</span>";
@@ -452,6 +451,7 @@ function printHTMLPage(scoreTable) {
 function printAnchor(url, text) {
     return `<a href="${url}"> ${text}</a>`;
 }
+
 function generateHelpLinks() {
     const help = printAnchor("resources/help.html", "help page");
     const yatzyGame = printAnchor(
